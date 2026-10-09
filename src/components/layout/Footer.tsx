@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Heart } from 'lucide-react';
+import { LogoIcon } from '@/components/layout/Logo';
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -7,12 +8,14 @@ export function Footer() {
   return (
     <footer className="border-t border-border/70 bg-background/50 py-6 mt-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
-        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          <ShieldCheck className="h-4 w-4 text-emerald-500 shrink-0" />
-          <span>
-            100% Client-Side Processing. Your documents never leave your device.
-          </span>
+        <div className="flex items-center gap-2.5 text-xs text-muted-foreground">
+          <LogoIcon size={20} className="rounded-lg shadow-sm" />
+          <div className="flex items-center gap-1.5">
+            <ShieldCheck className="h-4 w-4 text-emerald-500 shrink-0" />
+            <span>100% Client-Side Processing. Your documents never leave your device.</span>
+          </div>
         </div>
+
         <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
           <span>&copy; {year} PDF N-Up Optimizer</span>
           <span>•</span>
