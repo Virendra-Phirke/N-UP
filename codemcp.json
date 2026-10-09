@@ -1,0 +1,8 @@
+{
+  "id": "clean-react",
+  "name": "clean-react",
+  "description": "Project overview and guidelines for AI assistants.",
+  "permission": "both",
+  "approval": false,
+  "contextFile": "CONTEXT.md"
+}
