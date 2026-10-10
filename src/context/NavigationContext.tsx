@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type RoutePath = '/' | '/privacy' | '/terms' | '/about' | '/faq';
+export type RoutePath = '/' | '/privacy' | '/terms' | '/about' | '/faq' | '/student-guide';
 
 interface NavigationContextType {
   currentRoute: RoutePath;
@@ -18,6 +18,7 @@ function normalizePath(pathname: string): RoutePath {
   if (clean === '/terms') return '/terms';
   if (clean === '/about') return '/about';
   if (clean === '/faq') return '/faq';
+  if (clean === '/student-guide') return '/student-guide';
   return '/';
 }
 

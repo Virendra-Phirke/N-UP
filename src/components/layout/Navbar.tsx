@@ -3,7 +3,7 @@ import { Logo } from '@/components/layout/Logo';
 import { ThemeToggle } from '@/components/theme-provider';
 import { useNavigation, NavLink, RoutePath } from '@/context/NavigationContext';
 import { cn } from '@/lib/utils';
-import { Menu, X, FileText, HelpCircle, Shield, Info, Layers } from 'lucide-react';
+import { Menu, X, FileText, HelpCircle, Shield, Info, Layers, GraduationCap } from 'lucide-react';
 
 export function Navbar({ className }: { className?: string }) {
   const { currentRoute, navigateTo } = useNavigation();
@@ -11,6 +11,7 @@ export function Navbar({ className }: { className?: string }) {
 
   const navItems: { label: string; path: RoutePath; icon: React.ReactNode }[] = [
     { label: 'PDF Tool', path: '/', icon: <Layers className="h-3.5 w-3.5" /> },
+    { label: 'Student Guide', path: '/student-guide', icon: <GraduationCap className="h-3.5 w-3.5 text-amber-500" /> },
     { label: 'How It Works', path: '/about', icon: <Info className="h-3.5 w-3.5" /> },
     { label: 'FAQ', path: '/faq', icon: <HelpCircle className="h-3.5 w-3.5" /> },
     { label: 'Privacy', path: '/privacy', icon: <Shield className="h-3.5 w-3.5" /> },

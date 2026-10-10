@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Heart, Github, ExternalLink, Sparkles, Layers, FileText, Scale } from 'lucide-react';
+import { ShieldCheck, Heart, Github, ExternalLink, Sparkles, Layers, FileText, Scale, GraduationCap } from 'lucide-react';
 import { LogoIcon } from '@/components/layout/Logo';
 import { useNavigation, NavLink } from '@/context/NavigationContext';
 
@@ -74,6 +74,12 @@ export function Footer() {
             <h4 className="font-semibold text-foreground text-xs uppercase tracking-wider">Resources</h4>
             <ul className="space-y-2">
               <li>
+                <NavLink href="/student-guide" className="hover:text-foreground transition-colors font-medium text-amber-600 dark:text-amber-400 flex items-center gap-1.5">
+                  <GraduationCap className="h-3 w-3" />
+                  <span>Student Reduction Guide</span>
+                </NavLink>
+              </li>
+              <li>
                 <NavLink href="/about" className="hover:text-foreground transition-colors">
                   How It Works & Architecture
                 </NavLink>
@@ -84,8 +90,8 @@ export function Footer() {
                 </NavLink>
               </li>
               <li>
-                <NavLink href="/about" className="hover:text-foreground transition-colors">
-                  Duplex Printing Instructions
+                <NavLink href="/student-guide" className="hover:text-foreground transition-colors">
+                  Campus Xerox & Print Settings
                 </NavLink>
               </li>
               <li>

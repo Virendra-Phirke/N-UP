@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect, ChangeEvent, DragEvent } from 'react';
 import { UploadZone, ValidationState } from '@/components/pdf/UploadZone';
 import { ResultsPanel, DownloadResult } from '@/components/pdf/ResultsPanel';
-import { HowItWorksCard, WhyNUpCard } from '@/components/pdf/InfoCards';
+import { HowItWorksCard, WhyNUpCard, StudentReductionCard } from '@/components/pdf/InfoCards';
+import { GraduationCap, Sparkles } from 'lucide-react';
 import { PDFDocument } from 'pdf-lib';
 import { createNUpPdf, sanitizeFilename, createPdfBlobUrl, revokePdfBlobUrl, downloadNUpPdf } from '@/nUpPdf';
 import { rearrangePdf as rearrange6 } from '@/REARRANGE6';
@@ -224,14 +225,17 @@ export function PDFNUpPage() {
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
-      {/* Hero text */}
+      {/* Hero text with Student Badge */}
       <div className="mb-8 max-w-3xl">
+        <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-600 dark:text-amber-400 mb-3 shadow-sm">
+          <GraduationCap className="h-3.5 w-3.5" />
+          <span>Student Reductions & Pocket Notes • Cut Xerox Costs by 89%</span>
+        </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
           Convert PDF to 6 or 9 Pages Per Sheet
         </h1>
         <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
-          Upload your PDF and get two optimized versions — 6 pages per sheet and 9 pages per
-          sheet. Download, print and save paper effortlessly.
+          Upload your lecture slides or semester notes and get two optimized layouts — 6-up (large diagrams) and 9-up (pocket notes). Pre-aligned for double-sided duplex cutting.
         </p>
       </div>
 
@@ -269,8 +273,9 @@ export function PDFNUpPage() {
           </div>
         </div>
 
-        {/* RIGHT column: How it works & Why N-Up cards */}
+        {/* RIGHT column: Student Card, How it works & Why N-Up cards */}
         <aside className="space-y-5">
+          <StudentReductionCard />
           <HowItWorksCard />
           <WhyNUpCard />
         </aside>

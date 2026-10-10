@@ -8,6 +8,7 @@ import { PrivacyPolicyPage } from '@/pages/PrivacyPolicyPage';
 import { TermsPage } from '@/pages/TermsPage';
 import { AboutPage } from '@/pages/AboutPage';
 import { FAQPage } from '@/pages/FAQPage';
+import { StudentGuidePage } from '@/pages/StudentGuidePage';
 
 function AppContent() {
   const { currentRoute } = useNavigation();
@@ -22,6 +23,8 @@ function AppContent() {
         return <AboutPage />;
       case '/faq':
         return <FAQPage />;
+      case '/student-guide':
+        return <StudentGuidePage />;
       case '/':
       default:
         return <PDFNUpPage />;
