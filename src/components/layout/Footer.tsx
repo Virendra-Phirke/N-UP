@@ -131,12 +131,12 @@ export function Footer() {
                 </NavLink>
               </li>
               <li>
-                <span className="text-[11px] text-muted-foreground/80">
+                <span className="text-[11px] text-muted-foreground">
                   Open Source under MIT License
                 </span>
               </li>
               <li>
-                <span className="text-[11px] text-muted-foreground/80">
+                <span className="text-[11px] text-muted-foreground">
                   GDPR & CCPA Compliant by Design
                 </span>
               </li>

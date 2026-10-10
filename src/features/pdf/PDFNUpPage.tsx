@@ -231,7 +231,7 @@ export function PDFNUpPage() {
         <div className="space-y-6">
           {/* Hero text with Student Badge */}
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-600 dark:text-amber-400 mb-3 shadow-sm">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-800 dark:text-amber-300 mb-3 shadow-sm">
               <GraduationCap className="h-3.5 w-3.5" />
               <span>Student Reductions & Pocket Notes • Cut Xerox Costs by 89%</span>
             </div>

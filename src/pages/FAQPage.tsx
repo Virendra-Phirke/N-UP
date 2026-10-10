@@ -98,7 +98,7 @@ export function FAQPage() {
 
       {/* Header */}
       <div className="mb-8 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-xs font-semibold text-purple-600 dark:text-purple-400 mb-3">
+        <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-3 py-1 text-xs font-semibold text-purple-700 dark:text-purple-400 mb-3">
           <HelpCircle className="h-3.5 w-3.5" />
           Support & Questions
         </div>
@@ -115,10 +115,10 @@ export function FAQPage() {
         <button
           onClick={() => setActiveCategory('all')}
           className={cn(
-            'rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors',
+            'rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors',
             activeCategory === 'all'
               ? 'bg-primary text-primary-foreground shadow-sm'
-              : 'bg-muted/60 text-muted-foreground hover:bg-muted hover:text-foreground'
+              : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
           )}
         >
           All Questions
@@ -126,10 +126,10 @@ export function FAQPage() {
         <button
           onClick={() => setActiveCategory('security')}
           className={cn(
-            'inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors',
+            'inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors',
             activeCategory === 'security'
               ? 'bg-primary text-primary-foreground shadow-sm'
-              : 'bg-muted/60 text-muted-foreground hover:bg-muted hover:text-foreground'
+              : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
           )}
         >
           <ShieldCheck className="h-3.5 w-3.5" />

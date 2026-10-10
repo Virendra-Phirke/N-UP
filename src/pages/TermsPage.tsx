@@ -25,7 +25,7 @@ export function TermsPage() {
 
       {/* Header */}
       <div className="mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary mb-3">
+        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-700 dark:text-blue-400 mb-3">
           <Scale className="h-3.5 w-3.5" />
           Legal Agreement
         </div>

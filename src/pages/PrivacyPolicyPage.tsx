@@ -25,7 +25,7 @@ export function PrivacyPolicyPage() {
 
       {/* Hero Header */}
       <div className="mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-3">
+        <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400 mb-3">
           <ShieldCheck className="h-3.5 w-3.5" />
           Zero Data Collection Guarantee
         </div>

@@ -105,11 +105,11 @@ function DownloadCard({
               <h3 className="font-bold text-base text-foreground">
                 {result.pagesPerSheet} Pages Per Sheet
               </h3>
-              <Badge variant={isSix ? 'default' : 'success'} className="text-[10px] py-0 px-2">
+              <Badge variant={isSix ? 'default' : 'success'} className="text-[10px] py-0.5 px-2">
                 {isSix ? '2 × 3 Grid (Landscape)' : '3 × 3 Grid (Portrait)'}
               </Badge>
             </div>
-            <p className="text-xs text-muted-foreground mt-0.5">
+            <p className="text-xs text-muted-foreground mt-0.5 font-medium">
               {result.outputPageCount} output sheet{result.outputPageCount !== 1 ? 's' : ''} &nbsp;•&nbsp;{' '}
               {(result.bytes.length / (1024 * 1024)).toFixed(2)} MB
             </p>
@@ -281,17 +281,17 @@ export function ResultsPanel({
       </div>
 
       {/* Student Print Shop Instructions Banner */}
-      <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-4 sm:p-5 space-y-3">
+      <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 dark:bg-amber-500/5 p-4 sm:p-5 space-y-3">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
-            <div className="rounded-lg bg-amber-500/10 p-2 text-amber-600 dark:text-amber-400 shrink-0">
+            <div className="rounded-lg bg-amber-500/15 p-2 text-amber-700 dark:text-amber-400 shrink-0">
               <GraduationCap className="h-5 w-5" />
             </div>
             <div>
               <h4 className="text-sm font-bold text-foreground">
                 Xerox / Print Shop Settings Cheat Sheet
               </h4>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-muted-foreground font-medium">
                 Crucial printer settings to avoid ruined double-sided cuts.
               </p>
             </div>
@@ -302,11 +302,11 @@ export function ResultsPanel({
               onClick={handleCopyInstructions}
               variant="outline"
               size="sm"
-              className="gap-1.5 text-xs w-full sm:w-auto font-medium"
+              className="gap-1.5 text-xs w-full sm:w-auto font-semibold border-amber-500/30 bg-card hover:bg-amber-500/10"
             >
               {copiedInstructions ? (
                 <>
-                  <Check className="h-3.5 w-3.5 text-emerald-500" />
+                  <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>Copied!</span>
                 </>
               ) : (
@@ -320,7 +320,7 @@ export function ResultsPanel({
               onClick={() => navigateTo('/student-guide')}
               variant="ghost"
               size="sm"
-              className="gap-1 text-xs text-primary shrink-0"
+              className="gap-1 text-xs text-primary font-semibold shrink-0"
             >
               <span>Full Guide</span>
               <Info className="h-3.5 w-3.5" />
@@ -329,17 +329,17 @@ export function ResultsPanel({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1 text-xs">
-          <div className="rounded-lg bg-background/80 border border-border/60 p-2.5">
+          <div className="rounded-lg bg-card border border-border/80 p-2.5 shadow-xs">
             <span className="font-semibold text-foreground block mb-0.5">1. Paper Size</span>
-            <span className="text-muted-foreground">Standard A4 ($210 \times 297$ mm)</span>
+            <span className="text-muted-foreground font-medium">Standard A4 (210 × 297 mm)</span>
           </div>
-          <div className="rounded-lg bg-background/80 border border-border/60 p-2.5">
+          <div className="rounded-lg bg-card border border-border/80 p-2.5 shadow-xs">
             <span className="font-semibold text-foreground block mb-0.5">2. Page Scaling</span>
-            <span className="text-muted-foreground"><strong>100% / Actual Size</strong> (Never fit to page)</span>
+            <span className="text-muted-foreground font-medium"><strong className="text-foreground">100% / Actual Size</strong> (Never fit to page)</span>
           </div>
-          <div className="rounded-lg bg-background/80 border border-border/60 p-2.5">
+          <div className="rounded-lg bg-card border border-border/80 p-2.5 shadow-xs">
             <span className="font-semibold text-foreground block mb-0.5">3. Duplex Flip</span>
-            <span className="text-muted-foreground">9-Up: <strong>Long Edge</strong> | 6-Up: <strong>Short Edge</strong></span>
+            <span className="text-muted-foreground font-medium">9-Up: <strong className="text-foreground">Long Edge</strong> | 6-Up: <strong className="text-foreground">Short Edge</strong></span>
           </div>
         </div>
       </div>

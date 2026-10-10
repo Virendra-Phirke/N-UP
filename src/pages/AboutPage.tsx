@@ -25,7 +25,7 @@ export function AboutPage() {
 
       {/* Hero Header */}
       <div className="mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-600 dark:text-blue-400 mb-3">
+        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-700 dark:text-blue-400 mb-3">
           <Sparkles className="h-3.5 w-3.5" />
           High-Efficiency Print Engineering
         </div>
@@ -39,42 +39,42 @@ export function AboutPage() {
 
       {/* 3 Core Value Pillars */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 mb-10">
-        <Card className="border-border/60 bg-card/60 backdrop-blur-sm">
+        <Card className="border-border/80 bg-card/80 backdrop-blur-sm shadow-xs">
           <CardContent className="p-5 flex flex-col items-start gap-3">
-            <div className="rounded-lg bg-emerald-500/10 p-2.5 text-emerald-600 dark:text-emerald-400">
+            <div className="rounded-lg bg-emerald-500/15 p-2.5 text-emerald-700 dark:text-emerald-400">
               <Leaf className="h-5 w-5" />
             </div>
             <div>
               <h3 className="font-semibold text-sm text-foreground">Save Up to 89% Paper</h3>
-              <p className="text-xs text-muted-foreground mt-1">
+              <p className="text-xs text-muted-foreground mt-1 font-medium">
                 A 100-page document requires only 12 sheets in 9-Up (duplex), radically shrinking paper bulk and printing expense.
               </p>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="border-border/60 bg-card/60 backdrop-blur-sm">
+        <Card className="border-border/80 bg-card/80 backdrop-blur-sm shadow-xs">
           <CardContent className="p-5 flex flex-col items-start gap-3">
-            <div className="rounded-lg bg-blue-500/10 p-2.5 text-blue-600 dark:text-blue-400">
+            <div className="rounded-lg bg-blue-500/15 p-2.5 text-blue-700 dark:text-blue-400">
               <Zap className="h-5 w-5" />
             </div>
             <div>
               <h3 className="font-semibold text-sm text-foreground">Sub-Second Processing</h3>
-              <p className="text-xs text-muted-foreground mt-1">
+              <p className="text-xs text-muted-foreground mt-1 font-medium">
                 Zero network latency. Everything executes directly inside your browser memory using hardware-accelerated Web APIs.
               </p>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="border-border/60 bg-card/60 backdrop-blur-sm">
+        <Card className="border-border/80 bg-card/80 backdrop-blur-sm shadow-xs">
           <CardContent className="p-5 flex flex-col items-start gap-3">
-            <div className="rounded-lg bg-purple-500/10 p-2.5 text-purple-600 dark:text-purple-400">
+            <div className="rounded-lg bg-purple-500/15 p-2.5 text-purple-700 dark:text-purple-400">
               <ShieldCheck className="h-5 w-5" />
             </div>
             <div>
               <h3 className="font-semibold text-sm text-foreground">100% Client-Side Privacy</h3>
-              <p className="text-xs text-muted-foreground mt-1">
+              <p className="text-xs text-muted-foreground mt-1 font-medium">
                 Your confidential documents never touch any server. They remain strictly in your machine's volatile RAM.
               </p>
             </div>

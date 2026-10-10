@@ -54,7 +54,7 @@ export function StudentGuidePage() {
 
       {/* Hero Header */}
       <div className="mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-600 dark:text-amber-400 mb-3">
+        <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-800 dark:text-amber-300 mb-3">
           <GraduationCap className="h-4 w-4" />
           Student Reductions & Pocket Notes Guide
         </div>
@@ -68,42 +68,42 @@ export function StudentGuidePage() {
 
       {/* Quick Stat Highlights */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 mb-10">
-        <Card className="border-border/60 bg-card/60 backdrop-blur-sm">
+        <Card className="border-border/80 bg-card/80 backdrop-blur-sm shadow-xs">
           <CardContent className="p-5 flex items-start gap-3">
-            <div className="rounded-lg bg-emerald-500/10 p-2.5 text-emerald-600 dark:text-emerald-400 shrink-0">
+            <div className="rounded-lg bg-emerald-500/15 p-2.5 text-emerald-700 dark:text-emerald-400 shrink-0">
               <TrendingDown className="h-5 w-5" />
             </div>
             <div>
               <div className="text-xl font-bold text-foreground">89% Cheaper</div>
-              <p className="text-xs text-muted-foreground mt-0.5">
+              <p className="text-xs text-muted-foreground mt-0.5 font-medium">
                 Turn a 150-page slide deck into just 9 physical sheets of A4 paper.
               </p>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="border-border/60 bg-card/60 backdrop-blur-sm">
+        <Card className="border-border/80 bg-card/80 backdrop-blur-sm shadow-xs">
           <CardContent className="p-5 flex items-start gap-3">
-            <div className="rounded-lg bg-blue-500/10 p-2.5 text-blue-600 dark:text-blue-400 shrink-0">
+            <div className="rounded-lg bg-blue-500/15 p-2.5 text-blue-700 dark:text-blue-400 shrink-0">
               <Scissors className="h-5 w-5" />
             </div>
             <div>
               <div className="text-xl font-bold text-foreground">Cut & Staple</div>
-              <p className="text-xs text-muted-foreground mt-0.5">
+              <p className="text-xs text-muted-foreground mt-0.5 font-medium">
                 Pages stay in natural reading order after cutting — zero manual sorting.
               </p>
             </div>
           </CardContent>
         </Card>
 
-        <Card className="border-border/60 bg-card/60 backdrop-blur-sm">
+        <Card className="border-border/80 bg-card/80 backdrop-blur-sm shadow-xs">
           <CardContent className="p-5 flex items-start gap-3">
-            <div className="rounded-lg bg-purple-500/10 p-2.5 text-purple-600 dark:text-purple-400 shrink-0">
+            <div className="rounded-lg bg-purple-500/15 p-2.5 text-purple-700 dark:text-purple-400 shrink-0">
               <Sparkles className="h-5 w-5" />
             </div>
             <div>
               <div className="text-xl font-bold text-foreground">Pocket Size</div>
-              <p className="text-xs text-muted-foreground mt-0.5">
+              <p className="text-xs text-muted-foreground mt-0.5 font-medium">
                 Carry an entire subject's semester syllabus easily in your pocket or pencil case.
               </p>
             </div>

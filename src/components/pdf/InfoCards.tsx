@@ -145,7 +145,7 @@ export function StudentReductionCard() {
     <Card className="rounded-2xl border border-amber-500/30 bg-gradient-to-br from-amber-500/10 via-card to-background shadow-sm overflow-hidden">
       <CardContent className="p-4 sm:p-5 space-y-3.5">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500/20 text-amber-600 dark:text-amber-400 shrink-0">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500/15 text-amber-700 dark:text-amber-400 shrink-0">
             <GraduationCap className="h-4 w-4" />
           </div>
           <div>
