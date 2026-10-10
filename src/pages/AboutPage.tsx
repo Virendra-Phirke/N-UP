@@ -97,9 +97,9 @@ export function AboutPage() {
                 <span className="rounded bg-blue-500/10 px-2 py-0.5 text-xs font-mono text-blue-600 dark:text-blue-400">Landscape A4</span>
               </div>
               <ul className="space-y-1.5 text-xs text-muted-foreground">
-                <li>• <strong>Sheet Size:</strong> $841.89 \times 595.28 \text{ pt}$ (A4 Landscape)</li>
-                <li>• <strong>Grid Matrix:</strong> 3 Columns × 2 Rows ($3 \times 2 = 6$)</li>
-                <li>• <strong>Target Cell:</strong> $\approx 280.63 \times 297.64 \text{ pt}$</li>
+                <li>• <strong>Sheet Size:</strong> 841.89 × 595.28 pt (A4 Landscape)</li>
+                <li>• <strong>Grid Matrix:</strong> 3 Columns × 2 Rows (3 × 2 = 6)</li>
+                <li>• <strong>Target Cell:</strong> ≈ 280.63 × 297.64 pt</li>
                 <li>• <strong>Sequence Pattern:</strong> Chrome-style rearrangement matching physical double-sided flip.</li>
               </ul>
             </div>
@@ -110,9 +110,9 @@ export function AboutPage() {
                 <span className="rounded bg-emerald-500/10 px-2 py-0.5 text-xs font-mono text-emerald-600 dark:text-emerald-400">Portrait A4</span>
               </div>
               <ul className="space-y-1.5 text-xs text-muted-foreground">
-                <li>• <strong>Sheet Size:</strong> $595.28 \times 841.89 \text{ pt}$ (A4 Portrait)</li>
-                <li>• <strong>Grid Matrix:</strong> 3 Columns × 3 Rows ($3 \times 3 = 9$)</li>
-                <li>• <strong>Target Cell:</strong> $\approx 198.43 \times 280.63 \text{ pt}$</li>
+                <li>• <strong>Sheet Size:</strong> 595.28 × 841.89 pt (A4 Portrait)</li>
+                <li>• <strong>Grid Matrix:</strong> 3 Columns × 3 Rows (3 × 3 = 9)</li>
+                <li>• <strong>Target Cell:</strong> ≈ 198.43 × 280.63 pt</li>
                 <li>• <strong>Sequence Pattern:</strong> Chrome-style rearrangement matching front-back duplex stacking.</li>
               </ul>
             </div>
@@ -143,7 +143,7 @@ export function AboutPage() {
             <div className="flex items-start gap-2.5">
               <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
               <div>
-                <strong className="text-foreground">Paper Size:</strong> Choose <strong>A4</strong> (Standard $210 \times 297 \text{ mm}$).
+                <strong className="text-foreground">Paper Size:</strong> Choose <strong>A4</strong> (Standard 210 × 297 mm).
               </div>
             </div>
             <div className="flex items-start gap-2.5">

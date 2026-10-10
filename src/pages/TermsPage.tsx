@@ -130,7 +130,7 @@ export function TermsPage() {
             5. Printing Verification & Practical Advice
           </h2>
           <p>
-            While the algorithmic engine calculates exact physical points ($\approx 198.43 \times 280.63 \text{ pt}$ for 9-up and $\approx 297.64 \times 280.63 \text{ pt}$ for 6-up) adhering to international A4 dimensions ($595.28 \times 841.89 \text{ pt}$), individual physical printers, hardware margins, driver scaling settings (e.g. "Fit to Printable Area"), and duplex flip axes (Short-edge vs Long-edge) may vary. 
+            While the algorithmic engine calculates exact physical points (≈ 198.43 × 280.63 pt for 9-up and ≈ 297.64 × 280.63 pt for 6-up) adhering to international A4 dimensions (595.28 × 841.89 pt), individual physical printers, hardware margins, driver scaling settings (e.g. &quot;Fit to Printable Area&quot;), and duplex flip axes (Short-edge vs Long-edge) may vary. 
           </p>
           <p className="mt-2 font-medium text-foreground">
             We strongly recommend that you print a single test sheet and verify the layout alignment before executing large bulk print jobs.
