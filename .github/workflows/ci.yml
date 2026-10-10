@@ -1,15 +1,15 @@
-name: Deploy to GitHub Pages
+name: CI & Build Validation
 
 on:
   push:
     branches:
       - main
-
-permissions:
-  contents: write
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,11 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run test suite
+        run: npm test
+
       - name: Build production bundle
         run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
