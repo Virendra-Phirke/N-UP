@@ -166,9 +166,9 @@ export function StudentReductionCard() {
           onClick={() => navigateTo('/student-guide')}
           variant="outline"
           size="sm"
-          className="w-full justify-between text-xs font-medium border-amber-500/30 hover:bg-amber-500/10"
+          className="w-full justify-between text-xs font-semibold h-11 px-4 border-amber-500/30 bg-card hover:bg-amber-500/10 active:scale-[0.98] rounded-xl shadow-xs"
         >
-          <span>Read Xerox & Cutting Guide</span>
+          <span>Read Xerox &amp; Cutting Guide</span>
           <ArrowRight className="h-3.5 w-3.5" />
         </Button>
       </CardContent>

@@ -37,44 +37,44 @@ export function StudentGuidePage() {
   };
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-4xl px-3.5 py-6 sm:px-6 sm:py-12">
       {/* Top Navigation */}
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-4 sm:mb-6 flex items-center justify-between">
         <Button
           variant="ghost"
           size="sm"
           onClick={() => navigateTo('/')}
-          className="gap-2 text-muted-foreground hover:text-foreground"
+          className="gap-2 text-muted-foreground hover:text-foreground active:scale-[0.98] min-h-[40px] px-2.5"
         >
           <ArrowLeft className="h-4 w-4" />
           <span>Back to PDF Optimizer</span>
         </Button>
-        <span className="text-xs text-muted-foreground">Student Masterclass</span>
+        <span className="text-xs text-muted-foreground font-medium hidden xs:inline">Student Masterclass</span>
       </div>
 
       {/* Hero Header */}
-      <div className="mb-10 text-center sm:text-left">
+      <div className="mb-8 sm:mb-10 text-center sm:text-left">
         <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-800 dark:text-amber-300 mb-3">
           <GraduationCap className="h-4 w-4" />
-          Student Reductions & Pocket Notes Guide
+          Student Reductions &amp; Pocket Notes Guide
         </div>
-        <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground leading-snug">
           The Ultimate Student Guide to PDF Reductions
         </h1>
-        <p className="mt-3 text-base text-muted-foreground sm:text-lg">
+        <p className="mt-2.5 sm:mt-3 text-sm sm:text-base text-muted-foreground sm:text-lg leading-relaxed">
           How to convert voluminous lecture slides and semester notes into miniature, double-sided pocket booklets while saving up to 89% on Xerox printing costs.
         </p>
       </div>
 
       {/* Quick Stat Highlights */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 mb-10">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4 mb-8 sm:mb-10">
         <Card className="border-border/80 bg-card/80 backdrop-blur-sm shadow-xs">
-          <CardContent className="p-5 flex items-start gap-3">
+          <CardContent className="p-4 sm:p-5 flex items-start gap-3">
             <div className="rounded-lg bg-emerald-500/15 p-2.5 text-emerald-700 dark:text-emerald-400 shrink-0">
               <TrendingDown className="h-5 w-5" />
             </div>
             <div>
-              <div className="text-xl font-bold text-foreground">89% Cheaper</div>
+              <div className="text-lg sm:text-xl font-bold text-foreground">89% Cheaper</div>
               <p className="text-xs text-muted-foreground mt-0.5 font-medium">
                 Turn a 150-page slide deck into just 9 physical sheets of A4 paper.
               </p>
@@ -83,12 +83,12 @@ export function StudentGuidePage() {
         </Card>
 
         <Card className="border-border/80 bg-card/80 backdrop-blur-sm shadow-xs">
-          <CardContent className="p-5 flex items-start gap-3">
+          <CardContent className="p-4 sm:p-5 flex items-start gap-3">
             <div className="rounded-lg bg-blue-500/15 p-2.5 text-blue-700 dark:text-blue-400 shrink-0">
               <Scissors className="h-5 w-5" />
             </div>
             <div>
-              <div className="text-xl font-bold text-foreground">Cut & Staple</div>
+              <div className="text-lg sm:text-xl font-bold text-foreground">Cut &amp; Staple</div>
               <p className="text-xs text-muted-foreground mt-0.5 font-medium">
                 Pages stay in natural reading order after cutting — zero manual sorting.
               </p>
@@ -97,12 +97,12 @@ export function StudentGuidePage() {
         </Card>
 
         <Card className="border-border/80 bg-card/80 backdrop-blur-sm shadow-xs">
-          <CardContent className="p-5 flex items-start gap-3">
+          <CardContent className="p-4 sm:p-5 flex items-start gap-3">
             <div className="rounded-lg bg-purple-500/15 p-2.5 text-purple-700 dark:text-purple-400 shrink-0">
               <Sparkles className="h-5 w-5" />
             </div>
             <div>
-              <div className="text-xl font-bold text-foreground">Pocket Size</div>
+              <div className="text-lg sm:text-xl font-bold text-foreground">Pocket Size</div>
               <p className="text-xs text-muted-foreground mt-0.5 font-medium">
                 Carry an entire subject's semester syllabus easily in your pocket or pencil case.
               </p>
@@ -112,14 +112,14 @@ export function StudentGuidePage() {
       </div>
 
       {/* Copy-Paste Xerox Instructions Box */}
-      <div className="mb-10 rounded-2xl border-2 border-primary/30 bg-primary/5 p-6 shadow-sm">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+      <div className="mb-8 sm:mb-10 rounded-2xl border-2 border-primary/30 bg-primary/5 p-4 sm:p-6 shadow-sm">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-4">
           <div className="flex items-center gap-2.5">
-            <div className="rounded-lg bg-primary p-2 text-primary-foreground">
+            <div className="rounded-lg bg-primary p-2 text-primary-foreground shrink-0">
               <Printer className="h-5 w-5" />
             </div>
             <div>
-              <h2 className="text-base font-bold text-foreground">Campus Xerox / Print Shop Instructions</h2>
+              <h2 className="text-sm sm:text-base font-bold text-foreground">Campus Xerox / Print Shop Instructions</h2>
               <p className="text-xs text-muted-foreground">
                 Copy and forward this message to your print shop operator or WhatsApp group.
               </p>
@@ -129,7 +129,7 @@ export function StudentGuidePage() {
             onClick={handleCopy}
             variant="default"
             size="sm"
-            className="gap-2 shrink-0 font-medium"
+            className="w-full sm:w-auto h-10 gap-2 shrink-0 font-semibold active:scale-[0.98]"
           >
             {copied ? (
               <>
@@ -145,7 +145,7 @@ export function StudentGuidePage() {
           </Button>
         </div>
 
-        <pre className="rounded-xl border border-border/70 bg-background/80 p-4 font-mono text-xs text-foreground whitespace-pre-wrap leading-relaxed overflow-x-auto">
+        <pre className="rounded-xl border border-border/70 bg-background/80 p-3.5 sm:p-4 font-mono text-xs text-foreground whitespace-pre-wrap leading-relaxed overflow-x-auto">
           {xeroxText}
         </pre>
       </div>

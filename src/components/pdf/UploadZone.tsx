@@ -82,22 +82,22 @@ export function UploadZone({
           onDragOver={onDragOver}
           onDragLeave={onDragLeave}
           className={cn(
-            'group relative flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed px-6 py-12 text-center transition-all duration-200 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+            'group relative flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed px-4 py-7 sm:px-6 sm:py-12 text-center transition-all duration-200 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-[0.99]',
             processing
               ? 'pointer-events-none border-primary/40 bg-primary/5'
               : isDragging
-              ? 'border-primary bg-primary/10 scale-[0.99] ring-4 ring-primary/10'
+              ? 'border-primary bg-primary/10 ring-4 ring-primary/10'
               : 'border-border/80 bg-background/50 hover:border-primary/50 hover:bg-muted/40 hover:shadow-sm'
           )}
         >
           {processing ? (
             /* Active Processing Feedback */
-            <div className="flex flex-col items-center justify-center py-4 space-y-3.5">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <Loader2 className="h-8 w-8 animate-spin" />
+            <div className="flex flex-col items-center justify-center py-2 sm:py-4 space-y-3">
+              <div className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                <Loader2 className="h-7 w-7 sm:h-8 sm:w-8 animate-spin" />
               </div>
-              <div>
-                <p className="text-base font-semibold text-foreground">
+              <div className="px-2">
+                <p className="text-sm sm:text-base font-semibold text-foreground">
                   {processingStep || 'Processing PDF…'}
                 </p>
                 <p className="text-xs text-muted-foreground mt-1 max-w-sm">
@@ -110,33 +110,37 @@ export function UploadZone({
             <>
               <div
                 className={cn(
-                  'mb-4 flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-300 shadow-sm',
+                  'mb-3 sm:mb-4 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl transition-all duration-300 shadow-sm',
                   isDragging
                     ? 'bg-primary text-primary-foreground scale-110'
                     : 'bg-primary/10 text-primary group-hover:scale-105 group-hover:bg-primary/15'
                 )}
               >
-                <UploadCloud className="h-8 w-8" />
+                <UploadCloud className="h-7 w-7 sm:h-8 sm:w-8" />
               </div>
 
-              <p className="text-base font-semibold text-foreground">
-                Drag &amp; drop your PDF here
+              <p className="text-base sm:text-lg font-bold text-foreground">
+                Tap to select or drop PDF here
               </p>
-              <p className="mt-1 text-sm text-muted-foreground">or</p>
+              <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm text-muted-foreground">
+                Lecture notes, slides, formula sheets
+              </p>
 
-              {/* Dedicated Choose File Button */}
-              <Button
-                type="button"
-                onClick={handleOpenFileDialog}
-                className="mt-3.5 shadow-sm hover:shadow"
-                size="default"
-              >
-                <FileText className="h-4 w-4 mr-2" />
-                Choose File
-              </Button>
+              {/* Dedicated Choose File Button - Full width on small mobile, auto on sm */}
+              <div className="mt-3.5 w-full sm:w-auto px-4 sm:px-0">
+                <Button
+                  type="button"
+                  onClick={handleOpenFileDialog}
+                  className="w-full sm:w-auto h-11 px-6 text-sm font-semibold rounded-xl shadow-sm hover:shadow active:scale-[0.98]"
+                  size="default"
+                >
+                  <FileText className="h-4 w-4 mr-2" />
+                  Choose PDF Document
+                </Button>
+              </div>
 
-              <p className="mt-4 text-xs text-muted-foreground">
-                Upload triggers automatic rearrangement &amp; N-up layout &nbsp;•&nbsp; Max: 50 MB
+              <p className="mt-3.5 text-[11px] sm:text-xs text-muted-foreground">
+                Instant in-browser conversion &bull; 100% private &bull; Max 50 MB
               </p>
             </>
           )}

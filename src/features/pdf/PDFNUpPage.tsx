@@ -224,26 +224,26 @@ export function PDFNUpPage() {
   const hasResults = Boolean(results.six || results.nine);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
+    <div className="mx-auto max-w-7xl px-3.5 py-5 sm:px-6 sm:py-10">
       {/* Main two-column grid matching the desktop & mobile layouts */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 lg:gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_390px] gap-6 lg:gap-8 items-start">
         {/* LEFT column: Hero text, Upload zone & Results */}
-        <div className="space-y-6">
+        <div className="space-y-5 sm:space-y-6">
           {/* Hero text with Student Badge */}
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-800 dark:text-amber-300 mb-3 shadow-sm">
-              <GraduationCap className="h-3.5 w-3.5" />
-              <span>Student Reductions & Pocket Notes • Cut Xerox Costs by 89%</span>
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-1 text-[11px] sm:text-xs font-semibold text-amber-800 dark:text-amber-300 mb-2.5 shadow-xs">
+              <GraduationCap className="h-3.5 w-3.5 shrink-0" />
+              <span>Student Reductions &bull; Cut Xerox Costs by 89%</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-[1.15]">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-[1.18]">
               Convert PDF to 6 or 9 Pages Per Sheet
             </h1>
-            <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Upload your lecture slides or semester notes and get two optimized layouts — 6-up (large diagrams) and 9-up (pocket notes). Pre-aligned for double-sided duplex cutting.
+            <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed font-normal">
+              Upload your lecture slides or study notes to get two optimized layouts — 6-up and 9-up pocket notes. Pre-aligned for double-sided duplex cutting.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-border/80 bg-card p-5 sm:p-6 shadow-sm space-y-4">
+          <div className="rounded-2xl border border-border/80 bg-card p-3.5 sm:p-6 shadow-sm space-y-4">
             <UploadZone
               file={file}
               validationState={validationState}

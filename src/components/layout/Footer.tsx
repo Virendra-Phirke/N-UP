@@ -8,22 +8,22 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border/70 bg-card/30 backdrop-blur-sm mt-16 text-xs text-muted-foreground">
+    <footer className="border-t border-border/70 bg-card/30 backdrop-blur-sm mt-10 sm:mt-16 text-xs text-muted-foreground pb-safe">
       {/* Upper Grid Section */}
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:gap-12">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-7 sm:gap-8 lg:gap-12">
           {/* Brand & Client-Side Security Mission */}
-          <div className="md:col-span-1 space-y-3">
+          <div className="sm:col-span-2 md:col-span-1 space-y-3">
             <div className="flex items-center gap-2 text-foreground font-bold text-sm">
               <LogoIcon size={24} className="rounded-lg shadow-sm" />
               <span>PDF N-Up Optimizer</span>
             </div>
-            <p className="text-muted-foreground leading-relaxed text-xs">
+            <p className="text-muted-foreground leading-relaxed text-xs font-normal">
               Fast, high-precision document rearrangement and N-up sheet conversion. Engineered to cut paper consumption by up to 89%.
             </p>
-            <div className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
+            <div className="inline-flex items-center gap-1.5 rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-medium text-emerald-700 dark:text-emerald-400">
               <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
-              <span>100% Client-Side • Zero Uploads</span>
+              <span>100% Client-Side &bull; Zero Uploads</span>
             </div>
           </div>
 

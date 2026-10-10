@@ -166,11 +166,24 @@ html[data-magicui-theme-vt="active"] *::after {
   /* ring-offset */
   .ring-offset-background { --tw-ring-offset-color: hsl(var(--background)); }
 
+  /* Safe area padding utilities for mobile notch/home indicator */
+  .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pl-safe { padding-left: env(safe-area-inset-left, 0px); }
+  .pr-safe { padding-right: env(safe-area-inset-right, 0px); }
+
   /* Rounded radius */
   .rounded-md { border-radius: calc(var(--radius) - 4px); }
   .rounded-lg { border-radius: calc(var(--radius) - 2px); }
   .rounded-xl { border-radius: var(--radius); }
   .rounded-2xl { border-radius: calc(var(--radius) + 4px); }
+}
+
+/* ─── Mobile Touch & Tap Improvements ──────────────────────────────────── */
+@media (hover: none) and (pointer: coarse) {
+  button, [role="button"], a {
+    touch-action: manipulation;
+  }
 }
 
 /* ─── Scrollbar ─────────────────────────────────────────────────────────── */

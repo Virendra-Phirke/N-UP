@@ -32,10 +32,14 @@ export function Navbar({ className }: { className?: string }) {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Brand Logo with clickable link */}
         <button
-          onClick={() => navigateTo('/')}
-          className="text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg transition-opacity hover:opacity-90"
+          onClick={() => {
+            navigateTo('/');
+            setMobileMenuOpen(false);
+          }}
+          className="text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg transition-opacity hover:opacity-90 active:scale-[0.98] py-1"
+          aria-label="PDF N-Up Home"
         >
-          <Logo size={36} />
+          <Logo size={32} />
         </button>
 
         {/* Desktop Navigation Links */}
@@ -61,17 +65,18 @@ export function Navbar({ className }: { className?: string }) {
         </nav>
 
         {/* Right side controls (Theme + Mobile Menu Trigger) */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3">
           <div className="h-4 w-px bg-border hidden sm:block" />
 
           {/* Theme Toggler */}
           <ThemeToggle variant="circle" />
 
-          {/* Mobile hamburger menu button */}
+          {/* Mobile hamburger menu button - 44x44 touch target */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="rounded-lg p-2 text-muted-foreground hover:bg-muted hover:text-foreground md:hidden focus:outline-none"
+            className="flex h-11 w-11 items-center justify-center rounded-xl text-foreground hover:bg-muted active:bg-muted/80 md:hidden focus:outline-none transition-transform active:scale-95"
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -80,8 +85,8 @@ export function Navbar({ className }: { className?: string }) {
 
       {/* Mobile Navigation Dropdown */}
       {mobileMenuOpen && (
-        <div className="border-b border-border bg-background/95 backdrop-blur-md px-4 py-3 md:hidden animate-in slide-in-from-top-2 duration-200">
-          <div className="flex flex-col gap-1.5">
+        <div className="border-b border-border bg-background/95 backdrop-blur-md px-3 py-3 md:hidden animate-in slide-in-from-top-2 duration-200 shadow-lg">
+          <div className="flex flex-col gap-1">
             {navItems.map((item) => {
               const isActive = currentRoute === item.path;
               return (
@@ -89,14 +94,19 @@ export function Navbar({ className }: { className?: string }) {
                   key={item.path}
                   onClick={() => handleMobileNav(item.path)}
                   className={cn(
-                    'flex items-center gap-2.5 rounded-lg px-3 py-2 text-left text-xs font-medium transition-colors',
+                    'flex items-center gap-3 rounded-xl px-3.5 py-3 text-left text-sm font-medium transition-all active:scale-[0.99] min-h-[48px]',
                     isActive
                       ? 'bg-primary/10 text-primary font-semibold'
                       : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                   )}
                 >
-                  {item.icon}
-                  <span>{item.label}</span>
+                  <div className={cn(
+                    'flex h-7 w-7 items-center justify-center rounded-lg',
+                    isActive ? 'bg-primary/15 text-primary' : 'bg-muted text-muted-foreground'
+                  )}>
+                    {item.icon}
+                  </div>
+                  <span className="flex-1">{item.label}</span>
                 </button>
               );
             })}

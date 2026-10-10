@@ -82,7 +82,7 @@ function DownloadCard({
   return (
     <div
       className={cn(
-        'rounded-2xl border bg-card p-5 space-y-4 transition-all duration-200 shadow-sm',
+        'rounded-2xl border bg-card p-4 sm:p-5 space-y-4 transition-all duration-200 shadow-sm',
         isSix
           ? 'border-blue-500/30 hover:border-blue-500/50'
           : 'border-emerald-500/30 hover:border-emerald-500/50'
@@ -92,67 +92,67 @@ function DownloadCard({
         <div className="flex items-start gap-3">
           <div
             className={cn(
-              'flex h-12 w-12 items-center justify-center rounded-xl shrink-0 font-bold',
+              'flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-xl shrink-0 font-bold',
               isSix
-                ? 'bg-blue-500/10 text-blue-500 dark:bg-blue-500/20'
-                : 'bg-emerald-500/10 text-emerald-500 dark:bg-emerald-500/20'
+                ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400'
+                : 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
             )}
           >
-            <FileText className="h-6 w-6" />
+            <FileText className="h-5 w-5 sm:h-6 sm:w-6" />
           </div>
-          <div>
-            <div className="flex flex-wrap items-center gap-2">
-              <h3 className="font-bold text-base text-foreground">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+              <h3 className="font-bold text-sm sm:text-base text-foreground">
                 {result.pagesPerSheet} Pages Per Sheet
               </h3>
-              <Badge variant={isSix ? 'default' : 'success'} className="text-[10px] py-0.5 px-2">
+              <Badge variant={isSix ? 'default' : 'success'} className="text-[10px] py-0.5 px-2 font-semibold">
                 {isSix ? '2 × 3 Grid (Landscape)' : '3 × 3 Grid (Portrait)'}
               </Badge>
             </div>
             <p className="text-xs text-muted-foreground mt-0.5 font-medium">
-              {result.outputPageCount} output sheet{result.outputPageCount !== 1 ? 's' : ''} &nbsp;•&nbsp;{' '}
+              {result.outputPageCount} output sheet{result.outputPageCount !== 1 ? 's' : ''} &bull;{' '}
               {(result.bytes.length / (1024 * 1024)).toFixed(2)} MB
             </p>
           </div>
         </div>
 
         {/* Xerox Setting Badge */}
-        <div className="inline-flex items-center gap-1.5 rounded-lg border border-border/80 bg-muted/50 px-2.5 py-1 text-[11px] font-medium text-foreground">
+        <div className="inline-flex items-center gap-1.5 rounded-lg border border-border/80 bg-muted/50 px-2.5 py-1 text-[11px] font-medium text-foreground self-start sm:self-auto">
           <Printer className="h-3.5 w-3.5 text-primary shrink-0" />
           <span>
-            Duplex: <strong>{isSix ? 'Flip on Short Edge' : 'Flip on Long Edge'}</strong>
+            Duplex: <strong className="text-foreground">{isSix ? 'Flip on Short Edge' : 'Flip on Long Edge'}</strong>
           </span>
         </div>
       </div>
 
-      {/* Buttons */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+      {/* Touch-Friendly Action Buttons */}
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-2.5 pt-1">
         <Button
           onClick={() => onDownload(result)}
           variant={isSix ? 'default' : 'success'}
           size="lg"
-          className="w-full font-medium shadow-sm"
+          className="w-full sm:flex-1 h-12 text-sm font-semibold rounded-xl shadow-sm active:scale-[0.98]"
         >
           <Download className="h-4 w-4 mr-2" />
-          Download {result.pagesPerSheet}-Up
+          Download {result.pagesPerSheet}-Up PDF
         </Button>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 w-full sm:w-auto">
           <Button
             type="button"
             variant="outline"
             size="lg"
             onClick={() => setActivePreview(isPreviewing ? null : result.pagesPerSheet)}
-            className="w-full font-medium"
+            className="flex-1 sm:flex-initial h-12 text-sm font-medium rounded-xl active:scale-[0.98]"
           >
             {isPreviewing ? (
               <>
-                <EyeOff className="h-4 w-4 mr-2" />
-                Hide Preview
+                <EyeOff className="h-4 w-4 mr-1.5" />
+                Hide
               </>
             ) : (
               <>
-                <Eye className="h-4 w-4 mr-2" />
+                <Eye className="h-4 w-4 mr-1.5" />
                 Preview
               </>
             )}
@@ -165,10 +165,11 @@ function DownloadCard({
               size="lg"
               onClick={handleShare}
               disabled={sharing}
-              className="px-3 shrink-0"
+              className="flex-1 sm:flex-initial h-12 px-4 rounded-xl active:scale-[0.98] font-medium"
               title="Share PDF to WhatsApp or Print Shop"
             >
-              <Share2 className="h-4 w-4" />
+              <Share2 className="h-4 w-4 mr-1.5 text-primary" />
+              <span>Share</span>
             </Button>
           )}
         </div>
@@ -177,13 +178,13 @@ function DownloadCard({
       {/* Embedded PDF Preview */}
       {isPreviewing && (
         <div className="pt-2 animate-in fade-in-50 duration-200">
-          <div className="flex items-center justify-between pb-2 text-xs text-muted-foreground">
+          <div className="flex items-center justify-between pb-2 text-xs text-muted-foreground font-medium">
             <span>In-browser document preview</span>
             <a
               href={result.url}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 text-primary hover:underline"
+              className="inline-flex items-center gap-1 text-primary hover:underline font-semibold"
             >
               Open in new tab <ExternalLink className="h-3 w-3" />
             </a>
@@ -191,7 +192,7 @@ function DownloadCard({
           <iframe
             src={result.url}
             title={`${result.pagesPerSheet}-Up PDF Preview`}
-            className="w-full h-[480px] rounded-xl border border-border bg-white"
+            className="w-full h-[340px] sm:h-[480px] rounded-xl border border-border bg-white"
           />
         </div>
       )}

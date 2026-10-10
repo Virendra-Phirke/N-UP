@@ -81,31 +81,31 @@ export function FAQPage() {
   };
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-4xl px-3.5 py-6 sm:px-6 sm:py-12">
       {/* Top Navigation */}
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-4 sm:mb-6 flex items-center justify-between">
         <Button
           variant="ghost"
           size="sm"
           onClick={() => navigateTo('/')}
-          className="gap-2 text-muted-foreground hover:text-foreground"
+          className="gap-2 text-muted-foreground hover:text-foreground active:scale-[0.98] min-h-[40px] px-2.5"
         >
           <ArrowLeft className="h-4 w-4" />
           <span>Back to PDF Optimizer</span>
         </Button>
-        <span className="text-xs text-muted-foreground">Help Center</span>
+        <span className="text-xs text-muted-foreground font-medium hidden xs:inline">Help Center</span>
       </div>
 
       {/* Header */}
-      <div className="mb-8 text-center sm:text-left">
+      <div className="mb-6 sm:mb-8 text-center sm:text-left">
         <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-3 py-1 text-xs font-semibold text-purple-700 dark:text-purple-400 mb-3">
           <HelpCircle className="h-3.5 w-3.5" />
-          Support & Questions
+          Support &amp; Questions
         </div>
-        <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground leading-snug">
           Frequently Asked Questions
         </h1>
-        <p className="mt-3 text-base text-muted-foreground sm:text-lg">
+        <p className="mt-2.5 sm:mt-3 text-sm sm:text-base text-muted-foreground sm:text-lg leading-relaxed">
           Find instant answers regarding security, printing duplex configurations, and N-up page layouts.
         </p>
       </div>

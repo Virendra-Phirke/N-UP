@@ -32,9 +32,9 @@ function AppContent() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground transition-colors duration-200">
+    <div className="flex min-h-[100dvh] flex-col bg-background text-foreground transition-colors duration-200 overflow-x-hidden w-full">
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 w-full pb-safe">
         {renderCurrentPage()}
       </main>
       <Footer />
