@@ -160,7 +160,7 @@ npm install
 
 ```bash
 npm run dev
-# The application will launch at http://localhost:3000/PDF_REARRANGE/
+# The application will launch at http://localhost:3000/
 ```
 
 ### Production Build & Preview
