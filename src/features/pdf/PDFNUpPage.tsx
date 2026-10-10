@@ -224,25 +224,25 @@ export function PDFNUpPage() {
   const hasResults = Boolean(results.six || results.nine);
 
   return (
-    <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
-      {/* Hero text with Student Badge */}
-      <div className="mb-8 max-w-3xl">
-        <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-600 dark:text-amber-400 mb-3 shadow-sm">
-          <GraduationCap className="h-3.5 w-3.5" />
-          <span>Student Reductions & Pocket Notes • Cut Xerox Costs by 89%</span>
-        </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground">
-          Convert PDF to 6 or 9 Pages Per Sheet
-        </h1>
-        <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
-          Upload your lecture slides or semester notes and get two optimized layouts — 6-up (large diagrams) and 9-up (pocket notes). Pre-aligned for double-sided duplex cutting.
-        </p>
-      </div>
-
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
       {/* Main two-column grid matching the desktop & mobile layouts */}
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 lg:gap-8 items-start">
-        {/* LEFT column: Upload zone & Results */}
+        {/* LEFT column: Hero text, Upload zone & Results */}
         <div className="space-y-6">
+          {/* Hero text with Student Badge */}
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-600 dark:text-amber-400 mb-3 shadow-sm">
+              <GraduationCap className="h-3.5 w-3.5" />
+              <span>Student Reductions & Pocket Notes • Cut Xerox Costs by 89%</span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-[1.15]">
+              Convert PDF to 6 or 9 Pages Per Sheet
+            </h1>
+            <p className="mt-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
+              Upload your lecture slides or semester notes and get two optimized layouts — 6-up (large diagrams) and 9-up (pocket notes). Pre-aligned for double-sided duplex cutting.
+            </p>
+          </div>
+
           <div className="rounded-2xl border border-border/80 bg-card p-5 sm:p-6 shadow-sm space-y-4">
             <UploadZone
               file={file}
@@ -280,6 +280,6 @@ export function PDFNUpPage() {
           <WhyNUpCard />
         </aside>
       </div>
-    </main>
+    </div>
   );
 }
