@@ -56,7 +56,7 @@ function DownloadCard({
     try {
       if (navigator.share) {
         setSharing(true);
-        const file = new File([result.bytes], result.filename, { type: 'application/pdf' });
+        const file = new File([result.bytes as unknown as BlobPart], result.filename, { type: 'application/pdf' });
         if (navigator.canShare && navigator.canShare({ files: [file] })) {
           await navigator.share({
             title: result.filename,
